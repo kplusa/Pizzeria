@@ -1,0 +1,64 @@
+html,body{
+background-color: #121619;
+
+scroll-behavior: smooth;
+margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+h1{
+    color: white;
+    
+}
+p{
+    color: white;   
+}
+
+
+
+  a{
+      color: white;
+      text-decoration: none;
+  }
+  .logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width:10%;
+      
+    
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    font-family: 'Marcellus SC';
+    font-size: 22px;
+    list-style: none;
+    justify-content: center;
+    margin: 30px;
+  }
+  
+  .nav-item:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  
+  .nav-link:link,
+  .nav-link:visited {
+    color: #fff;
+    padding: 0.8rem 1rem;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .nav-link:hover {
+    border-radius: 0.3rem;
+    background-color: #dd9a05;
+  }
+  .bgpizza {
+    width: 100vw;
+    height: 100vh;
+  }
+
+
