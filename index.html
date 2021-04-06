@@ -28,66 +28,84 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Glidejs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header id="home" class="header">
       <!-- Navigation -->
-      <nav>
-        <div class="logodiv">
-          <a href="#home">
-            <img class="logo" src="resources/logotransparent.png"
-          /></a>
-        </div>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#home" class="nav-link scroll-link">Home</a>
-          </li>
+      <nav class="nav">
+        <div class="navigation container">
+          <div id="logodiv" class="logodiv">
+            <a href="#home">
+              <img class="logo" src="resources/logotransparent.png"
+            /></a>
+          </div>
+          <div class="menu">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#home" class="nav-link scroll-link">Home</a>
+              </li>
 
-          <li class="nav-item">
-            <a href="#menu" class="nav-link scroll-link">Menu</a>
-            <ul>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Menu2</a></li>
-              <li><a href="#">Menu3</a></li>
+              <li class="nav-item">
+                <a href="#menu" class="nav-link scroll-link">Menu</a>
+                <ul>
+                  <li><a href="#">Menu</a></li>
+                  <li><a href="#">Menu2</a></li>
+                  <li><a href="#">Menu3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#placeyourorder" class="nav-link scroll-link"
+                  >Place Your Order</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link scroll-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link scroll-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#pizzasize" class="nav-link scroll-link"
+                  >Pizza Sizes</a
+                >
+              </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#placeyourorder" class="nav-link scroll-link"
-              >Place Your Order</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link scroll-link">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link scroll-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#pizzasize" class="nav-link scroll-link">Pizza Sizes</a>
-          </li>
-        </ul>
+          </div>
+        </div>
+        
       </nav>
-      <div class="header-info">
-        <h1>PIZZA PARADISE</h1>
-        <h3>MAKING PEOPLE HAPPY</h3>
-        <div class="rectangle"></div>
-        <ul id="header-buttons">
-          <li>
-            <a href="#placeyourorder" class="button-order">PLACE YOUR ORDER</a>
-          </li>
-          <li><a href="#menu" class="button-menu">MENU</a></li>
-        </ul>
-      </div>
-
-      <img src="resources/pizza.png" class="bgpizza" />
+      
+<div>
+  <img src="resources/pizza.png" class="bgpizza" />
+  <div class="header-info">
+    <h1>PIZZA PARADISE</h1>
+    <h3>MAKING PEOPLE HAPPY</h3>
+    <div class="rectangle"></div>
+    <div id="header-buttons">
+      <a href="#placeyourorder" class="button-order">PLACE YOUR ORDER</a>
+      <a href="#menu" class="button-menu">MENU</a>
+    </div>
+  </div>
+</div>
+      
     </header>
     <section class="sectionabout" id="about">
       <div class="title"><h1>About</h1></div>
       <div class="about-info">
-        <p style="color:#fff">
+        <p style="color: #fff">
           A good pizzeria is not only about high-quality dishes. It is also a
           unique bond between service and customers. We have been putting our
           hearts into the dishes we prepare since 1996, thanks to which our
@@ -148,44 +166,88 @@
       </div>
     </section>
     <section class="sectioncontact" id="contact">
-      
-        <div class="form">
-            <div class="contact-info">
-                <h3 class="title">Let's get in touch</h3>
-                <p class="text"> Contact us with the following details. and fillup the form with the details. </p>
-                <div class="info">
-                    <div class="social-information"> <i class="fa fa-map-marker"></i>
-                        <p>adress</p>
-                    </div>
-                    <div class="social-information"> <i class="fa fa-envelope-o"></i>
-                        <p>help@pizzaparadise.com</p>
-                    </div>
-                    <div class="social-information"> <i class="fa fa-mobile-phone"></i>
-                        <p>111 222 333 </p>
-                    </div>
-                </div>
-                <div class="social-media">
-                    <p>Connect with us :</p>
-                    <div class="social-icons"> <a href="#"> <i class="fa fa-facebook-f"></i> </a> <a href="#"> <i class="fa fa-twitter"></i> </a> <a href="#"> <i class="fa fa-instagram"></i> </a> <a href="#"> <i class="fa fa-linkedin"></i> </a> </div>
-                </div>
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Contact us with the following details. and fillup the form with the
+            details.
+          </p>
+          <div class="info">
+            <div class="social-information">
+              <i class="fa fa-map-marker"></i>
+              <p>adress</p>
             </div>
-            <div class="contact-info-form"> <span class="circle one"></span> <span class="circle two"></span>
-                <form action="#" onclick="return false;" autocomplete="off">
-                    <h3 class="title">Contact us</h3>
-                    <div class="social-input-containers"> <input type="text" name="name" class="input" placeholder="Name" /> </div>
-                    <div class="social-input-containers"> <input type="email" name="email" class="input" placeholder="Email" /> </div>
-                    <div class="social-input-containers"> <input type="tel" name="phone" class="input" placeholder="Phone" /> </div>
-                    <div class="social-input-containers textarea"> <textarea name="message" class="input" placeholder="Message"></textarea> </div> <input type="submit" value="Send" class="btn" />
-                </form>
+            <div class="social-information">
+              <i class="fa fa-envelope-o"></i>
+              <p>help@pizzaparadise.com</p>
             </div>
+            <div class="social-information">
+              <i class="fa fa-mobile-phone"></i>
+              <p>111 222 333</p>
+            </div>
+          </div>
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#"> <i class="fa fa-facebook-f"></i> </a>
+              <a href="#"> <i class="fa fa-twitter"></i> </a>
+              <a href="#"> <i class="fa fa-instagram"></i> </a>
+              <a href="#"> <i class="fa fa-linkedin"></i> </a>
+            </div>
+          </div>
         </div>
-    
-    </section>
-    <footer><!-- Copyright -->
-      <div class="text-center p-3">
-        <p style="color:#fff">© 2021 Copyright: Kacper Plusa</p>
+        <div class="contact-info-form">
+          <span class="circle one"></span> <span class="circle two"></span>
+          <form action="#" onclick="return false;" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="social-input-containers">
+              <input type="text" name="name" class="input" placeholder="Name" />
+            </div>
+            <div class="social-input-containers">
+              <input
+                type="email"
+                name="email"
+                class="input"
+                placeholder="Email"
+              />
+            </div>
+            <div class="social-input-containers">
+              <input
+                type="tel"
+                name="phone"
+                class="input"
+                placeholder="Phone"
+              />
+            </div>
+            <div class="social-input-containers textarea">
+              <textarea
+                name="message"
+                class="input"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
       </div>
-      <!-- Copyright --></footer>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    </section>
+    <footer>
+      <!-- Copyright -->
+      <div class="text-center p-3">
+        <p style="color: #fff">© 2021 Copyright: Kacper Plusa</p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Typeit -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- Glidejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <!-- Custom Script -->
+    <script src="application.js"></script>
   </body>
 </html>

@@ -32,10 +32,12 @@ a {
 .logodiv {
   text-align: center;
   width: 100%;
+  display: block;
 }
 .logo {
   width: 10rem;
 }
+
 .nav-list {
   display: flex;
   align-items: center;
@@ -60,6 +62,26 @@ a {
   border-radius: 0.5rem;
   background-color: #dd9a05;
 }
+.nav {
+  padding: 1.6rem 0;
+  
+}
+
+.nav.fix-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #707070;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.navigation {
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .bgpizza {
   bottom: 0;
@@ -69,9 +91,7 @@ a {
   z-index: -1;
   height: 80%;
 }
-.sectionabout {
-  padding: 5rem 0 7rem 0;
-}
+
 
 @media only screen and (max-width: 996px) {
   .logo {
@@ -121,13 +141,15 @@ a {
 }
 .sectionabout {
   padding: 3rem 0 7rem 0;
-  position: relative;
+  
   width: 100%;
   min-height: 100vh;
   z-index: 1;
 }
 .sectionpizzasize {
-  padding: 0rem 0 7rem 0;
+  
+  width: 100%;
+  min-height: 100vh;
 }
 .sectionplaceyourorder {
   padding: 5rem 0 7rem 0;
@@ -293,27 +315,32 @@ td {
 }
 #header-buttons{
   margin-top: 100px;
-  display:inline-block;
-  
+  text-align: center;
+  display: flex;
+  width: 100%;
 }
 .button-order{
+  border-radius: 0.5rem;
   background: none;
     border: 2px solid #fff;
     position: relative;
     color: #fff;
     font-size: 20px;
     height: 30px;
-    margin-right: 50px; 
+    width: 200px;
+    margin-right: 10px; 
     text-align: center; 
 }
 .button-menu{
   background: #FDCC53;
+  border-radius: 0.5rem;
     border: 2px solid #707070;
     position: relative;
     color: #707070;
     font-size: 20px;
-    height: 30px;
-    width: 130px;
+    width: 7vw;
+    height: min-content;
+    margin-right: 100px; 
     text-align: center;  
     
 }
@@ -331,6 +358,7 @@ td {
   color: #fff; 
   text-decoration: none;
 }
+/*contact*/
 ::placeholder {
   color: #fff;
   opacity: 1
