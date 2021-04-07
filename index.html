@@ -61,7 +61,7 @@
               <li class="nav-item">
                 <a href="#menu" class="nav-link scroll-link">Menu</a>
                 <ul>
-                  <li><a href="#">Menu</a></li>
+                  <li><a href="#specialities">Specialities</a></li>
                   <li><a href="#">Menu2</a></li>
                   <li><a href="#">Menu3</a></li>
                 </ul>
@@ -85,38 +85,46 @@
             </ul>
           </div>
         </div>
-        
       </nav>
-      
-<div>
-  <img src="resources/pizza.png" class="bgpizza" />
-  <div class="header-info">
-    <h1>PIZZA PARADISE</h1>
-    <h3>MAKING PEOPLE HAPPY</h3>
-    <div class="rectangle"></div>
-    <div id="header-buttons">
-      <a href="#placeyourorder" class="button-order">PLACE YOUR ORDER</a>
-      <a href="#menu" class="button-menu">MENU</a>
-    </div>
-  </div>
-</div>
-      
+
+      <div>
+        <img src="resources/pizza.png" class="bgpizza" />
+        <div class="header-info">
+          <h1 class="ml1">
+            <span class="text-wrapper">
+              <span class="letters">PIZZA PARADISE
+              </br>MAKING PEOPLE HAPPY </span>
+              <span class="line line2"></span>
+            </span>
+          </h1>
+          <div id="header-buttons">
+            <a href="#placeyourorder" class="button-order">PLACE YOUR ORDER</a>
+            <a href="#menu" class="button-menu">MENU</a>
+          </div>
+        </div>
+      </div>
     </header>
     <section class="sectionabout" id="about">
+      
       <div class="title"><h1>About</h1></div>
       <div class="about-info">
-        <p style="color: #fff">
-          A good pizzeria is not only about high-quality dishes. It is also a
-          unique bond between service and customers. We have been putting our
-          hearts into the dishes we prepare since 1996, thanks to which our
-          clients keep coming back to us. We took our first steps in business in
-          our own pizzeria with 200 seats. This pizzeria quickly gained
-          popularity. It was not uncommon for customers to wait to be seated.
-          Our restaurant attracted the attention of visitors who expressed their
-          willingness to open a restaurant of a similar nature. We are Pizza
-          Friends because our restaurants are made by friends for friends.
-        </p>
-        <img class="about-info-img" src="resources/4.jpg" />
+        <div class="left" data-aos="fade-right" data-aos-duration="3000">
+          <p>
+            A good pizzeria is not only about high-quality dishes. It is also a
+            unique bond between service and customers. We have been putting our
+            hearts into the dishes we prepare since 1996, thanks to which our
+            clients keep coming back to us. We took our first steps in business
+            in our own pizzeria with 200 seats. This pizzeria quickly gained
+            popularity. It was not uncommon for customers to wait to be seated.
+            Our restaurant attracted the attention of visitors who expressed
+            their willingness to open a restaurant of a similar nature. We are
+            Pizza Friends because our restaurants are made by friends for
+            friends.
+          </p>
+        </div>
+        <div class="right" data-aos="fade-left" data-aos-duration="3000">
+          <img src="resources/4.jpg" />
+        </div>
       </div>
     </section>
     <section class="sectionpizzasize" id="pizzasize">
@@ -160,12 +168,57 @@
         </div>
       </div>
     </section>
+    <!--menu-->
+    <section class="menu" id="menu">
+      <div id="specialities" class="pizza-menu-foreground">
+        <img class="pizza-menu-background" src="resources/pizza-1280x300.jpg" />
+        <div class="pizza-menu">
+          <h1>Specialities</h1>
+        </div>
+      </div>
+
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Margherita</h1>
+          <h3>sauce, cheese, oregano</h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 21.00 PLN</h3>
+          <h3>Medium: 26.00 PLN</h3>
+          <h3>Large: 33.00 PLN</h3>
+        </div>
+      </div>
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Capriciosa</h1>
+          <h3>sauce, cheese, ham, and mushrooms</h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 25.00 PLN</h3>
+          <h3>Medium: 32.00 PLN</h3>
+          <h3>Large: 41.00 PLN</h3>
+        </div>
+      </div>
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Carbonara</h1>
+          <h3>cream sauce, cheese, bacon, mushrooms, and onion</h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 27.00 PLN</h3>
+          <h3>Medium: 35.00 PLN</h3>
+          <h3>Large: 45.00 PLN</h3>
+        </div>
+      </div>
+    </section>
+
     <section class="sectionplaceyourorder" id="placeyourorder">
       <div class="title">
         <h1>Place Your Order</h1>
       </div>
     </section>
     <section class="sectioncontact" id="contact">
+      <div id="contact" class="title"><h1>Contact Us</h1></div>
       <div class="form">
         <div class="contact-info">
           <h3 class="title">Let's get in touch</h3>
@@ -239,6 +292,7 @@
       </div>
       <!-- Copyright -->
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Typeit -->
