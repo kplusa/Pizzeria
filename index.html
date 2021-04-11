@@ -15,14 +15,10 @@
       sizes="32x32"
     />
     <link
-      rel="icon"
-      type="image/png"
-      href="resources/favicon-16x16.png"
-      sizes="16x16"
-    />
-    <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+      integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -33,13 +29,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
-    <!-- Glidejs -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
-    />
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -57,13 +47,22 @@
               <li class="nav-item">
                 <a href="#home" class="nav-link scroll-link">Home</a>
               </li>
-
+              <li class="nav-item">
+                <a href="#about" class="nav-link scroll-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#pizzasize" class="nav-link scroll-link"
+                  >Pizza Sizes</a
+                >
+              </li>
               <li class="nav-item">
                 <a href="#menu" class="nav-link scroll-link">Menu</a>
                 <ul>
-                  <li><a href="#specialities">Specialities</a></li>
-                  <li><a href="#">Menu2</a></li>
-                  <li><a href="#">Menu3</a></li>
+                  <li>
+                    <a href="#specialities" class="scroll-link">Specialities</a>
+                  </li>
+                  <li><a href="#unique" class="scroll-link">Unique</a></li>
+                  <li><a href="#premium" class="scroll-link">Premium</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -73,14 +72,6 @@
               </li>
               <li class="nav-item">
                 <a href="#contact" class="nav-link scroll-link">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a href="#about" class="nav-link scroll-link">About</a>
-              </li>
-              <li class="nav-item">
-                <a href="#pizzasize" class="nav-link scroll-link"
-                  >Pizza Sizes</a
-                >
               </li>
             </ul>
           </div>
@@ -92,20 +83,20 @@
         <div class="header-info">
           <h1 class="ml1">
             <span class="text-wrapper">
-              <span class="letters">PIZZA PARADISE
-              </br>MAKING PEOPLE HAPPY </span>
+              <span class="letters">PIZZA PARADISE MAKING PEOPLE HAPPY</span>
               <span class="line line2"></span>
             </span>
           </h1>
           <div id="header-buttons">
-            <a href="#placeyourorder" class="button-order">PLACE YOUR ORDER</a>
-            <a href="#menu" class="button-menu">MENU</a>
+            <a href="#placeyourorder" class="button-order scroll-link"
+              >PLACE YOUR ORDER</a
+            >
+            <a href="#menu" class="button-menu scroll-link">MENU</a>
           </div>
         </div>
       </div>
     </header>
     <section class="sectionabout" id="about">
-      
       <div class="title"><h1>About</h1></div>
       <div class="about-info">
         <div class="left" data-aos="fade-right" data-aos-duration="3000">
@@ -169,7 +160,7 @@
       </div>
     </section>
     <!--menu-->
-    <section class="menu" id="menu">
+    <section class="section-menu" id="menu">
       <div id="specialities" class="pizza-menu-foreground">
         <img class="pizza-menu-background" src="resources/pizza-1280x300.jpg" />
         <div class="pizza-menu">
@@ -191,7 +182,7 @@
       <div class="pizza-type">
         <div class="left-pizza-type">
           <h1>Capriciosa</h1>
-          <h3>sauce, cheese, ham, and mushrooms</h3>
+          <h3>sauce, cheese, ham and mushrooms</h3>
         </div>
         <div class="right-pizza-type">
           <h3>Small: 25.00 PLN</h3>
@@ -202,7 +193,7 @@
       <div class="pizza-type">
         <div class="left-pizza-type">
           <h1>Carbonara</h1>
-          <h3>cream sauce, cheese, bacon, mushrooms, and onion</h3>
+          <h3>cream sauce, cheese, bacon, mushrooms and onion</h3>
         </div>
         <div class="right-pizza-type">
           <h3>Small: 27.00 PLN</h3>
@@ -210,13 +201,222 @@
           <h3>Large: 45.00 PLN</h3>
         </div>
       </div>
+
+      <div id="unique" class="pizza-menu-foreground">
+        <img class="pizza-menu-background" src="resources/unique.jpg" />
+        <div class="pizza-menu">
+          <h1>Unique</h1>
+        </div>
+      </div>
+
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Greek Pizza</h1>
+          <h3>
+            Mediterranean cheese, black olives, tomato, herbs and tomato sauce
+          </h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 23.00 PLN</h3>
+          <h3>Medium: 27.00 PLN</h3>
+          <h3>Large: 37.00 PLN</h3>
+        </div>
+      </div>
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Napolitan Pizza</h1>
+          <h3>salami, black olives, jalapeño pepper and tomato sauce</h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 28.00 PLN</h3>
+          <h3>Medium: 36.00 PLN</h3>
+          <h3>Large: 45.00 PLN</h3>
+        </div>
+      </div>
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Barbecue Habanero Pizza</h1>
+          <h3>
+            chicken gyros, colored pepper, bacon, a mix of sauces: cream and
+            spicy Barbecue
+          </h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 35.00 PLN</h3>
+          <h3>Medium: 42.00 PLN</h3>
+          <h3>Large: 50.00 PLN</h3>
+        </div>
+      </div>
+
+      <div id="premium" class="pizza-menu-foreground">
+        <img class="pizza-menu-background" src="resources/heroImage.jpg" />
+        <div class="pizza-menu">
+          <h1>Premium</h1>
+        </div>
+      </div>
+
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>BBQ Party Pizza</h1>
+          <h3>
+            bacon, chicken, roasted onion, BBQ Dark Beer - Roleski sauce, cheese
+          </h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 35.00 PLN</h3>
+          <h3>Medium: 42.00 PLN</h3>
+          <h3>Large: 50.00 PLN</h3>
+        </div>
+      </div>
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Parma Fit Pizza</h1>
+          <h3>
+            ripening ham, cherry tomatoes, arugula, Grangusto ripening cheese,
+            tomato sauce, cheese, pumpkin and sunflower seeds.
+          </h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 35.00 PLN</h3>
+          <h3>Medium: 42.00 PLN</h3>
+          <h3>Large: 53.00 PLN</h3>
+        </div>
+      </div>
+      <div class="pizza-type">
+        <div class="left-pizza-type">
+          <h1>Mexican Pizza</h1>
+          <h3>
+            beef and poultry meat (kebab), bacon, corn, jalapeño pepper,
+            Jalapeño sauce
+          </h3>
+        </div>
+        <div class="right-pizza-type">
+          <h3>Small: 34.00 PLN</h3>
+          <h3>Medium: 40.00 PLN</h3>
+          <h3>Large: 47.00 PLN</h3>
+        </div>
+      </div>
     </section>
 
     <section class="sectionplaceyourorder" id="placeyourorder">
-      <div class="title">
-        <h1>Place Your Order</h1>
+      <div class="place-your-order-foreground">
+        <div>
+          <img class="place-your-order-background" src="resources/pizzaa.png" />
+
+          <div class="title" id="place-your-order">
+            <h1>Place Your Order</h1>
+          </div>
+          <section>
+            <div id="order">
+              <label>Choose The Pizza Type:</label>
+              <select class="form-select custom-select" id="pizza-type">
+                <option selected>---</option>
+                <option>Margherita</option>
+                <option>Capriciosa</option>
+                <option>Carbonara</option>
+                <option>Greek Pizza</option>
+                <option>Napolitan Pizza</option>
+                <option>Barbecue Habanero Pizza</option>
+                <option>BBQ Party Pizza</option>
+                <option>Parma Fit Pizza</option>
+                <option>Mexican Pizza</option>
+              </select>
+              <label>Choose The Pizza Size:</label>
+              <select class="form-select custom-select" id="pizza-size">
+                <option selected>---</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+              <label>Choose The Pizza Dough:</label>
+              <select class="form-select custom-select" id="pizza-dough">
+                <option selected>---</option>
+                <option>On thick dough</option>
+                <option>On thin dough</option>
+              </select>
+              <label>Choose The Pizza Sauce:</label>
+              <select class="form-select custom-select" id="pizza-sauce">
+                <option selected>---</option>
+                <option>Tomato sauce</option>
+                <option>Garlic sauce</option>
+              </select>
+              <label>How Many Pizza:</label>
+              <input
+                id="pizza-quantity"
+                type="number"
+                min="1"
+                placeholder="Pizza's Quantity"
+                required
+                class="form-select custom-select"
+              />
+              <input
+                id="delivery"
+                class="order-buttons"
+                type="submit"
+                value="Delivery"
+              />
+              <input
+                id="pick"
+                class="order-buttons"
+                type="submit"
+                value="Pick Up"
+              />
+            </div>
+            <div id="order-info">
+              <h3>Your Order is as follows:</h3>
+              <ol id="your-order"></ol>
+              <input
+                id="order-again"
+                class="order-buttons"
+                type="submit"
+                value="Order Again"
+              />
+            </div>
+            <div class="delivery-info">
+              <form>
+                <h3>DELIVERY</h3>
+                <h4>Please provide the following:</h4>
+                <input
+                  id="full-name"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                  class="form-control form-control-lg custom-select"
+                />
+                <input
+                  id="number"
+                  type="text"
+                  placeholder="Phone number"
+                  required
+                  class="form-control form-control-lg custom-select"
+                />
+                <input
+                  id="street"
+                  type="text"
+                  placeholder="street"
+                  required
+                  class="form-control form-control-lg custom-select"
+                />
+                <input
+                  id="city"
+                  type="text"
+                  placeholder="city"
+                  required
+                  class="form-control form-control-lg custom-select"
+                />
+                <input
+                  id="confirm"
+                  type="submit"
+                  value="Confirm"
+                  class="order-buttons"
+                />
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
+
     <section class="sectioncontact" id="contact">
       <div id="contact" class="title"><h1>Contact Us</h1></div>
       <div class="form">
@@ -288,19 +488,17 @@
     <footer>
       <!-- Copyright -->
       <div class="text-center p-3">
-        <p style="color: #fff">© 2021 Copyright: Kacper Plusa</p>
+        <p style="color: #fff">© 2021 Copyright: Kacper Płusa</p>
       </div>
       <!-- Copyright -->
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Typeit -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <!-- Glidejs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Custom Script -->
     <script src="application.js"></script>
   </body>
