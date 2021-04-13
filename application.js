@@ -99,7 +99,7 @@ $(document).ready(function () {
     $("#your-order").append("Pizza Dough: " + pizzaDough + "<br>");
     $("#your-order").append("Pizza Sauce: " + pizzaSauce + "<br>");
     $("#your-order").append("Pizza Quantity: " + pizzaQuantity + "<br>");
-    $("#your-order").append("Total Cost: " + sum + "<br>");
+    $("#your-order").append("Total Cost: " + sum + " zł"+ "<br>");
   });
   
   $("#confirm").click(function (event) {
@@ -124,7 +124,7 @@ $(document).ready(function () {
     $("#your-order").append("Pizza Sauce: " + pizzaSauce + "<br>");
     $("#your-order").append("Pizza Quantity: " + pizzaQuantity + "<br>");
     $("#your-order").append("Delivery fee: " + "5 ZŁ" + "<br>");
-    $("#your-order").append("Total Cost: " + (sum + 5) + "<br>");
+    $("#your-order").append("Total Cost: " + (sum + 5) + " zł"+"<br>");
   });
 
   $("#order-again").click(function (event) {
