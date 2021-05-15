@@ -311,7 +311,7 @@
               <label>Choose The Pizza Type:</label>
               <select class="form-select custom-select" id="pizza-type">
                 <option selected>---</option>
-                <option>Margherita</option>
+                <option>Margheritta</option>
                 <option>Capriciosa</option>
                 <option>Carbonara</option>
                 <option>Greek Pizza</option>
@@ -361,6 +361,9 @@
                 type="submit"
                 value="Pick Up"
               />
+              <div>
+              <label id="correct-info" style="color:red"></label>
+              </div>
             </div>
             <div id="order-info">
               <h3>Your Order is as follows:</h3>
@@ -410,6 +413,9 @@
                   value="Confirm"
                   class="order-buttons"
                 />
+                <div>
+                  <label id="correct-info-delivery" style="color:red"></label>
+                  </div>
               </form>
             </div>
           </section>
@@ -492,6 +498,7 @@
       </div>
       <!-- Copyright -->
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
