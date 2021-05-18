@@ -461,10 +461,11 @@
           <form action="#" onclick="return false;" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="social-input-containers">
-              <input type="text" name="name" class="input" placeholder="Name" />
+              <input id="name" type="text" name="name" class="input" placeholder="Name" />
             </div>
             <div class="social-input-containers">
               <input
+                id="email"
                 type="email"
                 name="email"
                 class="input"
@@ -473,6 +474,7 @@
             </div>
             <div class="social-input-containers">
               <input
+                id="phone"
                 type="tel"
                 name="phone"
                 class="input"
@@ -481,13 +483,15 @@
             </div>
             <div class="social-input-containers textarea">
               <textarea
+                id="message"
                 name="message"
                 class="input"
                 placeholder="Message"
               ></textarea>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input id="send" type="submit" value="Send" class="btn" />
           </form>
+          <label id="correct-info-contact" style="color:red"></label>
         </div>
       </div>
     </section>

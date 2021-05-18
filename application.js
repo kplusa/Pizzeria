@@ -74,34 +74,12 @@ anime
     delay: 1000,
   });
 
-  function sleep (time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
-  
+function sleep(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 $(document).ready(function () {
   $("#delivery").click(function (event) {
-    $("#correct-info").html("");
-    event.preventDefault();var type = $("#pizza-type").val();
-    var pizzaSize = $("#pizza-size").val();
-    var pizzaDough = $("#pizza-dough").val();
-    var pizzaSauce = $("#pizza-sauce").val();
-    var pizzaQuantity = $("#pizza-quantity").val();
-    var sum = 0;
-    if(type=="---" || pizzaSize=="---" || pizzaDough=="---" || pizzaQuantity==0 || pizzaQuantity==""){  
-      $("#correct-info").append("Invalid data");
-      sleep(1000).then(() => {
-        $("#correct-info").html("");
-      });
-      }
-      else
-      {
-    $("#order").hide();
-    $(".delivery-info").show();
-      }
-  });
-
-  $("#pick").click(function (event) {
-    
     $("#correct-info").html("");
     event.preventDefault();
     var type = $("#pizza-type").val();
@@ -110,43 +88,74 @@ $(document).ready(function () {
     var pizzaSauce = $("#pizza-sauce").val();
     var pizzaQuantity = $("#pizza-quantity").val();
     var sum = 0;
-    
-    if(type=="---" || pizzaSize=="---" || pizzaDough=="---" || pizzaQuantity==0 || pizzaQuantity==""){ 
-    $("#correct-info").append("Invalid data");
-    sleep(1000).then(() => {
-      $("#correct-info").html("");
-    });
+    if (
+      type == "---" ||
+      pizzaSize == "---" ||
+      pizzaDough == "---" ||
+      pizzaQuantity == 0 ||
+      pizzaQuantity == ""
+    ) {
+      $("#correct-info").append("Invalid data");
+      sleep(1000).then(() => {
+        $("#correct-info").html("");
+      });
+    } else {
+      $("#order").hide();
+      $(".delivery-info").show();
     }
-    else
-    {
-      axios.post('http://localhost:3000/create-order', {
-        "delivery": "no",
-        "pizzaType": type,
-        "pizzaSize": pizzaSize,
-        "pizzaDough": pizzaDough,
-        "pizzaSauce": pizzaSauce,
-        "amountOfPizzas": pizzaQuantity
+  });
 
-      })
-  .then(response => {
-    sum= response.data.summ;
-    $("#your-order").append("Pizza Type: " + type + "<br>");
-    $("#your-order").append("Pizza Size: " + pizzaSize + "<br>");
-    $("#your-order").append("Pizza Dough: " + pizzaDough + "<br>");
-    $("#your-order").append("Pizza Sauce: " + pizzaSauce + "<br>");
-    $("#your-order").append("Amount of Pizzas: " + pizzaQuantity + "<br>");
-    $("#your-order").append("Total Cost: " + sum + " zł"+ "<br>");
-  })
-  .catch(error => {
-    console.log(error);
+  $("#pick").click(function (event) {
+    $("#correct-info").html("");
+    event.preventDefault();
+    var type = $("#pizza-type").val();
+    var pizzaSize = $("#pizza-size").val();
+    var pizzaDough = $("#pizza-dough").val();
+    var pizzaSauce = $("#pizza-sauce").val();
+    var pizzaQuantity = $("#pizza-quantity").val();
+    var sum = 0;
+
+    if (
+      type == "---" ||
+      pizzaSize == "---" ||
+      pizzaDough == "---" ||
+      pizzaQuantity == 0 ||
+      pizzaQuantity == ""
+    ) {
+      $("#correct-info").append("Invalid data");
+      sleep(1000).then(() => {
+        $("#correct-info").html("");
+      });
+    } else {
+      axios
+        .post("http://localhost:3000/create-order", {
+          delivery: "no",
+          pizzaType: type,
+          pizzaSize: pizzaSize,
+          pizzaDough: pizzaDough,
+          pizzaSauce: pizzaSauce,
+          amountOfPizzas: pizzaQuantity,
+        })
+        .then((response) => {
+          sum = response.data.summ;
+          $("#your-order").append("Pizza Type: " + type + "<br>");
+          $("#your-order").append("Pizza Size: " + pizzaSize + "<br>");
+          $("#your-order").append("Pizza Dough: " + pizzaDough + "<br>");
+          $("#your-order").append("Pizza Sauce: " + pizzaSauce + "<br>");
+          $("#your-order").append(
+            "Amount of Pizzas: " + pizzaQuantity + "<br>"
+          );
+          $("#your-order").append("Total Cost: " + sum + " zł" + "<br>");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      $("#order").hide();
+      $("#place-your-order").hide();
+      $("#order-info").show();
+    }
   });
-    $("#order").hide();
-    $("#place-your-order").hide();
-    $("#order-info").show();
-    
-    }  
-  });
-  
+
   $("#confirm").click(function (event) {
     $("#correct-info-delivery").html("");
     event.preventDefault();
@@ -161,63 +170,90 @@ $(document).ready(function () {
     var pizzaDough = $("#pizza-dough").val();
     var pizzaSauce = $("#pizza-sauce").val();
     var pizzaQuantity = $("#pizza-quantity").val();
-    if(name=="" || number=="" || street=="" || city==0){ 
-      
+    if (name == "" || number == "" || street == "" || city == 0) {
       $("#correct-info-delivery").append("Invalid data");
       sleep(1000).then(() => {
         $("#correct-info-delivery").html("");
       });
-      }
-      else{
-        axios.post('http://localhost:3000/create-order', {
-        "delivery": "yes",
-        "fullname": name,
-        "telephoneNumber": number,
-        "street": street,
-        "city": city,
-        "pizzaType": type,
-        "pizzaSize": pizzaSize,
-        "pizzaDough": pizzaDough,
-        "pizzaSauce": pizzaSauce,
-        "amountOfPizzas": pizzaQuantity
-
-      })
-  .then(response => {
-    sum= response.data.summ;
-    deliveryFee = response.data.deliveryFee;
-    $("#your-order").append(
-      name + " your order has been successfully placed <br>"
-    );
-    $("#your-order").append("Pizza Type: " + type + "<br>");
-    $("#your-order").append("Pizza Size: " + pizzaSize + "<br>");
-    $("#your-order").append("Pizza Dough: " + pizzaDough + "<br>");
-    $("#your-order").append("Pizza Sauce: " + pizzaSauce + "<br>");
-    $("#your-order").append("Amount of Pizzas: " + pizzaQuantity + "<br>");
-    $("#your-order").append("Delivery fee: " + deliveryFee + "<br>");
-    $("#your-order").append("Total Cost: " + sum + " zł"+"<br>");
-  })
-  .catch(error => {
-    console.log(error);
-  });
-    $(".delivery-info").hide();
-    $("#order-info").show();
-    $("#place-your-order").hide();
-      }
+    } else {
+      axios
+        .post("http://localhost:3000/create-order", {
+          delivery: "yes",
+          fullname: name,
+          telephoneNumber: number,
+          street: street,
+          city: city,
+          pizzaType: type,
+          pizzaSize: pizzaSize,
+          pizzaDough: pizzaDough,
+          pizzaSauce: pizzaSauce,
+          amountOfPizzas: pizzaQuantity,
+        })
+        .then((response) => {
+          sum = response.data.summ;
+          deliveryFee = response.data.deliveryFee;
+          $("#your-order").append(
+            name + " your order has been successfully placed <br>"
+          );
+          $("#your-order").append("Pizza Type: " + type + "<br>");
+          $("#your-order").append("Pizza Size: " + pizzaSize + "<br>");
+          $("#your-order").append("Pizza Dough: " + pizzaDough + "<br>");
+          $("#your-order").append("Pizza Sauce: " + pizzaSauce + "<br>");
+          $("#your-order").append(
+            "Amount of Pizzas: " + pizzaQuantity + "<br>"
+          );
+          $("#your-order").append("Delivery fee: " + deliveryFee + "<br>");
+          $("#your-order").append("Total Cost: " + sum + " zł" + "<br>");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      $(".delivery-info").hide();
+      $("#order-info").show();
+      $("#place-your-order").hide();
+    }
   });
 
   $("#order-again").click(function (event) {
     event.preventDefault();
-    document.getElementById('pizza-type').value="---";
-    document.getElementById('pizza-size').value="---";
-    document.getElementById('pizza-dough').value="---";
-    document.getElementById('pizza-sauce').value="---";
-    document.getElementById('pizza-quantity').value="";
+    document.getElementById("pizza-type").value = "---";
+    document.getElementById("pizza-size").value = "---";
+    document.getElementById("pizza-dough").value = "---";
+    document.getElementById("pizza-sauce").value = "---";
+    document.getElementById("pizza-quantity").value = "";
     $("#order-info").hide();
     $("#your-order").empty();
-    
+
     $("#order").show();
     $("#place-your-order").show();
-    
-    
+  });
+  $("#send").click(function (event) {
+    $("#correct-info-contact").html("");
+    event.preventDefault();
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var phone = $("#phone").val();
+    var message = $("#message").val();
+    if (name == "" || number == "" || email == "" || message == "") {
+      $("#correct-info-contact").append("Invalid data");
+      sleep(1000).then(() => {
+        $("#correct-info-contact").html("");
+      });
+    } else {
+      axios.post("http://localhost:3000/send-message", {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+      });
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("message").value = "";
+      $("#correct-info-contact").append("Successfullly sent");
+      sleep(2000).then(() => {
+        $("#correct-info-contact").html("");
+      });
+    }
   });
 });

@@ -38,6 +38,11 @@ else{
   
 })
 
+app.post('/send-message', function(req,res)
+{
+console.log("Message is received from name: "+req.body.name+"\nemail: "+req.body.email+"\nFollowing message: "+req.body.message)
+});
+
 
 app.listen(3000, function(){
     console.log("Listening")
